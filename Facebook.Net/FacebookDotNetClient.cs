@@ -92,6 +92,11 @@ namespace FacebookDotNet
             {
                 return String.Empty;
             }
+            // Not happy with this check...
+            if (options.GetType().GetFields().Length > 0)
+            {
+                url += "&fields=";
+            }
             foreach (FieldInfo fi in options.GetType().GetFields())
             {
                 if (fi.FieldType == typeof(Boolean))
