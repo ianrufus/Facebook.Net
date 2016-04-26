@@ -10,7 +10,7 @@ namespace FacebookDotNet.Models
     public class User
     {
         // This is based on a user profile - different for other profile types? e.g. pages etc
-        public int id;
+        public string id;
         public string ageRange; // Object
         public string bio;
         public string birthday;
