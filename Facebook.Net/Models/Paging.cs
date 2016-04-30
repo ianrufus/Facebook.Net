@@ -7,8 +7,8 @@ namespace FacebookDotNet.Models
 {
     public class Paging
     {
-        public Cursors cursors;
-        public string previous;
-        public string next;
+        public Cursors Cursors;
+        public string Previous;
+        public string Next;
     }
 }

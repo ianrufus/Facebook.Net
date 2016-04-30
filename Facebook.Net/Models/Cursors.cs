@@ -7,7 +7,7 @@ namespace FacebookDotNet.Models
 {
     public class Cursors
     {
-        public string before;
-        public string after;
+        public string Before;
+        public string After;
     }
 }

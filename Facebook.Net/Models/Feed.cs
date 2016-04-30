@@ -7,7 +7,7 @@ namespace FacebookDotNet.Models
 {
     public class Feed
     {
-        public List<Datum> data;
-        public Paging paging;
+        public List<FeedData> Data;
+        public Paging Paging;
     }
 }
