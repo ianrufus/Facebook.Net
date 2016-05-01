@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    public class ProfilePictureSource
+    public class WebAppLink
     {
-        public int Height;
-        [JsonProperty("is_silhouette")]
-        public bool IsSilhouette;
+        [JsonProperty("should_fallback")]
+        public bool? ShouldFallback;
         public string Url;
-        public int Width;
     }
 }

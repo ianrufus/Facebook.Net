@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    public class ProfilePictureSource
+    public class VideoFormat
     {
+        [JsonProperty("embed_html")]
+        public string EmbedHtml;
+        public string Filter;
         public int Height;
-        [JsonProperty("is_silhouette")]
-        public bool IsSilhouette;
-        public string Url;
+        public string Picture;
         public int Width;
     }
 }

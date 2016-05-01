@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    // Would it be better to use proper names, with known names for deserializing? Or are we not bothered?
-    // Also need to consider folder structures for models - might make sense to base this based on which nodes are used where
     public class User
     {
-        // This is based on a user profile - different for other profile types? e.g. pages etc
         public string ID;
         [JsonProperty("age_range")]
-        public string AgeRange; // Object
+        public AgeRange AgeRange;
         public string Bio;
         public string Birthday;
-        public string Context; // Object
-        public string Cover; // Object
-        public string Currency; // Object
-        public List<string> Devices; // Object
-        public List<string> Education; // Object
+        public UserContext Context;
+        public CoverPhoto Cover;
+        public Currency Currency;
+        public List<UserDevice> Devices;
+        public List<EducationExperience> Education;
         public string Email;
         [JsonProperty("favorite_athletes")]
         public List<Experience> FavoriteAthletes;
@@ -29,7 +26,7 @@ namespace FacebookDotNet.Models
         [JsonProperty("first_name")]
         public string FirstName;
         public string Gender;
-        public string Hometown; //Object
+        public Page Hometown;
         [JsonProperty("inspirational_people")]
         public List<Experience> InspirationalPeople;
         [JsonProperty("install_type")]
@@ -46,16 +43,16 @@ namespace FacebookDotNet.Models
         public string LastName;
         public string Link;
         public string Locale;
-        public string Location; // Object
+        public Page Location;
         [JsonProperty("meeting_for")]
-        public List<string> MeetingFor; // Object
+        public List<string> MeetingFor;
         [JsonProperty("middle_name")]
         public string MiddleName;
         public string Name;
         [JsonProperty("name_format")]
         public string NameFormat;
         [JsonProperty("payment_pricepoints")]
-        public string PaymentPricepoints; // Object
+        public PaymentPricepoints PaymentPricepoints;
         public string Political;
         [JsonProperty("public_key")]
         public string PublicKey;
@@ -64,11 +61,11 @@ namespace FacebookDotNet.Models
         public string RelationshipStatus;
         public string Religion;
         [JsonProperty("security_settings")]
-        public string SecuritySettings; // Object
+        public SecuritySettings SecuritySettings;
         [JsonProperty("shared_login_upgrade_required_by")]
-        public string SharedLoginUpgradeRequiredBy; // DateTime
+        public DateTime SharedLoginUpgradeRequiredBy;
         [JsonProperty("significant_other")]
-        public string SignificantOther; // Object
+        public User SignificantOther;
         public List<Experience> Sports;
         [JsonProperty("test_group")]
         public int TestGroup;
@@ -81,10 +78,10 @@ namespace FacebookDotNet.Models
         public DateTime UpdatedTime;
         public bool? Verified;
         [JsonProperty("video_upload_limits")]
-        public string VideoUploadLimits; // Object
+        public VideoUploadLimits VideoUploadLimits;
         [JsonProperty("viewer_can_send_gift")]
         public bool? ViewerCanSendGift;
         public string Website;
-        public List<string> Work; // Object
+        public List<WorkExperience> Work;
     }
 }

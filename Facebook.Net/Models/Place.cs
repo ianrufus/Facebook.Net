@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    public class Experience
+    public class Place
     {
         public string ID;
-        public string Description;
-        public User From;
+        public Location Location;
         public string Name;
-        public List<User> With;
+        [JsonProperty("overall_rating")]
+        public float OverallRating;
     }
 }

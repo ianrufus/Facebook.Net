@@ -7,10 +7,10 @@ namespace FacebookDotNet.Models
 {
     public class UserPicture
     {
-        public int height;
-        public bool redirect;
-        public string type; // enum
-        public ProfilePictureSource data;
-        public Paging paging;
+        public int Height;
+        public bool Redirect;
+        public string Type; // enum
+        public ProfilePictureSource Data;
+        public Paging Paging;
     }
 }

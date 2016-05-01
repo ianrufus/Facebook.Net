@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    public class ProfilePictureSource
+    public class IOSAppLink
     {
-        public int Height;
-        [JsonProperty("is_silhouette")]
-        public bool IsSilhouette;
+        [JsonProperty("app_name")]
+        public string AppName;
+        [JsonProperty("app_store_id")]
+        public string AppStoreID;
         public string Url;
-        public int Width;
     }
 }

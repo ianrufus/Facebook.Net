@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace FacebookDotNet.Models
 {
-    public class Experience
+    public class PrimaryPage
     {
-        public string ID;
-        public string Description;
-        public User From;
+        public string Category;
         public string Name;
-        public List<User> With;
+        public string ID;
     }
 }
